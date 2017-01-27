@@ -14,19 +14,20 @@ var f = [];
 
 for (var i = 0; i < scores.length; i++) {
 	if (scores[i] < 61) {
-		f.push(i);
+		f.push(scores[i]);
 	} else if (scores[i] > 60 && scores[i] < 71) {
-		d.push(i);
+		d.push(scores[i]);
 	} else if (scores[i] > 70 && scores[i] < 81) {
-		c.push(i);
+		c.push(scores[i]);
 	} else if (scores[i] > 80 && scores[i] < 91) {
-		b.push(i);
+		b.push(scores[i]);
 	} else {
-		a.push(i);
+		a.push(scores[i]);
 	}
 }
 
 // How many of each grade??
+
 console.log("F: ", f.length);
 console.log("D: ", d.length);
 console.log("C: ", c.length);
@@ -40,7 +41,6 @@ console.log("Lowest Number: ", scoresSort[0]);
 // What is the highest grade?
 var scoresReverse = scores.sort(function (a,b) {return a-b}).reverse();
 console.log("Highest Number: ", scoresReverse[0]);
-
 
 
 
